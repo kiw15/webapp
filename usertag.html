@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>webapp/usertag.html</title>
+		<meta charset='utf-8' />
+		<style> 
+			company {
+				color : red;	
+			}
+			company>department{
+				background : yellow;
+			}
+			company[term]{
+				font-size: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<company term="10">한빛아카데미
+		<department>영업부</department>
+		<department>편집부
+			<team>그래픽팀	</team>
+			</department>
+		</company>
+		
+		<company>한국대학교
+		<department>영문학과</department>
+		<department>역사학과
+			<team>1학년</team>
+			</department>
+		</company>
+		<img src="naver.png">
+		
+		<script>
+			let dept = document.getElmenetsByTagName('department');
+			dept[0].childNodes[0].nodeValue = "Sales";
+		</script>
+	</body>
+
+
+</html>

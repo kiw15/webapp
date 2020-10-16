@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href^="https"]::after {
+            content: "🔗 ";
+        }
+
+        a[href^="mailto"]::before {
+            content: "📧 ";
+        }
+
+        a[href^="tel"]::before {
+            content: "📞 ";
+        }
+
+        li {
+            margin-bottom: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <center>
+            <h2>&lt;하이퍼링크관련&gt;</h2>
+        </center>
+    </header>
+    <section>
+        <article>
+            <a href="http://www.w3.org">W3C사이트</a>
+        </article>
+        <article>
+            <ul>
+                <li><a href="https://example.com">Website></a></li>
+                <li><a href="mailto:m.bluth@example.com">Email></a></li>
+                <li><a href="tel:+123456789">Phone></a></li>
+            </ul>
+        </article>
+    </section>
+</body>
+
+</html>
